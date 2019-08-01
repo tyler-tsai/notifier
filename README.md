@@ -19,7 +19,7 @@
 
 > Heroku runs one web dyno for you automatically, but other process types don’t start by default. To launch a worker, you need to scale it up to one dyno
 
--  上傳到 heroku 後，不會自動啟動 worker，讓我們在 CLI 輸入以下指令
+- 上傳到 heroku 後，不會自動啟動 worker，讓我們在 CLI 輸入以下指令
 
 ```
 $ heroku ps:scale worker=1     # 讓worker開始運作
