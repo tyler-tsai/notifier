@@ -12,6 +12,7 @@
 - 出現 if this then that，this 選擇 webhooks，that 選擇 line
 - 獲取 webhooks 的 url
 - 完成 codebase
+- 上傳 codebase 到 heroku，使用他們的 worker 服務
   * 首先註冊heroku帳號
   * 建立一個空專案
   * 自行建立一個nodejs projec在本地端後，上傳到heroku
