@@ -48,21 +48,17 @@ https://www.lnb.com.tw/api/market-place?apr_min=8&source=complex&page=1&per_page
 #### 需與 webhooks 服務設定的格式對應
 
 ```js
-request.post(
-  "https://maker.ifttt.com/trigger/song/with/key/cNj1aYhgd71adoLCF0sKFo",
-  {
-    form: {
-      value1: `<br>🔔利率 : ${apr}(${lender_irr}） <br>🔔期數 : ${period} <br><br>${purpose}/${
-        loan_detail.age !== null ? loan_detail.age : "不能說的秘密"
-      }(${loan_detail.gender === "male" ? "男" : "女"})/${
-        loan_detail.company_title
-      }(${loan_detail.company_seniority})<br>`,
-      value2: description,
-      value3:
-        "<br>🔔前往投資：https://www.lnb.com.tw/market-place/loan/" + serial
-    }
+request.post("https://maker.ifttt.com/trigger/song/with/key/{key}", {
+  form: {
+    value1: `<br>🔔利率 : ${apr}(${lender_irr}） <br>🔔期數 : ${period} <br><br>${purpose}/${
+      loan_detail.age !== null ? loan_detail.age : "不能說的秘密"
+    }(${loan_detail.gender === "male" ? "男" : "女"})/${
+      loan_detail.company_title
+    }(${loan_detail.company_seniority})<br>`,
+    value2: description,
+    value3: "<br>🔔前往投資：https://www.lnb.com.tw/market-place/loan/" + serial
   }
-);
+});
 ```
 
 > 參考資源 https://www.oxxostudio.tw/articles/201803/ifttt-line.html
