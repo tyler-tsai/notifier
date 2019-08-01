@@ -13,7 +13,37 @@
 - 獲取 webhooks 的 url
 - 完成 codebase
 - 上傳 codebase 到 heroku，使用他們的 worker 服務
-- 將 heroku 專案綁定 github 的 repository，完成 CD
+  * 首先註冊heroku帳號
+  * 建立一個空專案
+  * 自行建立一個nodejs projec在本地端後，上傳到heroku
+
+    ```
+     $ cd ~/my-project
+     
+     //在my-project裡建立一個node.js專案
+     $ npm install
+     
+     //安裝package "request"
+     $ npm install request
+     
+     //創建一個case.json檔案，格式必須是 {"caseString":[]}
+     $ echo '{"caseString":[]}' > test.json
+     
+     //創建Procfile，告訴heroku使用worker
+     $ echo 'worker: node index.js' > Procfile
+     
+     //創建 index.js，將主程式貼
+     
+     //上傳至heroku
+     $ git add .
+     $ git commit 'first commit'
+     $ git push heroku master //上傳到heroku
+    ``` 
+     關於如何使用 heroku CLI ，可參考 
+     [官方文件](https://devcenter.heroku.com/articles/deploying-nodejs)
+    
+    你也可以將 heroku 專案綁定 github 的 repository，完成 CD
+
 
 ## heroku 小筆記
 
