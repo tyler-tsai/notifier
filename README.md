@@ -13,18 +13,35 @@
 - 獲取 webhooks 的 url
 - 完成 codebase
 - 上傳 codebase 到 heroku，使用他們的 worker 服務
+  * 首先註冊heroku帳號
+  * 建立一個空專案
+  * 自行建立一個nodejs projec在本地端後，上傳到heroku
+
+    ```
+     $ cd ~/my-project
+     
+     //在my-project裡建立一個node.js專案
+     $ npm install
+     
+     //安裝package "request"
+     $ npm install request
+     
+     //創建一個case.json檔案，格式必須是 {"caseString":[]}
+     $ echo '{"caseString":[]}' > test.json
+     
+     //創建Procfile，告訴heroku使用worker
+     $ echo 'worker: node index.js' > Procfile
+     
+     //創建 index.js，將主程式貼
+     
+     //上傳至heroku
+     $ git add .
+     $ git commit 'first commit'
+     $ git push heroku master //部署完成
+     
+    ```
+    
 - 將 heroku 專案綁定 github 的 repository，完成 CD
-
-## heroku 小筆記
-
-> Heroku runs one web dyno for you automatically, but other process types don’t start by default. To launch a worker, you need to scale it up to one dyno
-
-- 上傳到 heroku 後，不會自動啟動 worker，讓我們在 CLI 輸入以下指令
-
-```
-$ heroku ps:scale worker=1     # 讓worker開始運作
-$ heroku logs --tail -a [專案名]    # 可以查看目前worker執行的狀態
-```
 
 ### IFTTT webhooks 設定說明
 
@@ -59,7 +76,7 @@ https://www.lnb.com.tw/api/market-place?apr_min=8&source=complex&page=1&per_page
 #### 需與 webhooks 服務設定的格式對應
 
 ```js
-request.post("https://maker.ifttt.com/trigger/{name}/with/key/{key}", {
+request.post("https://maker.ifttt.com/trigger/song/with/key/{key}", {
   form: {
     value1: `<br>🔔利率 : ${apr}(${lender_irr}） <br>🔔期數 : ${period} <br><br>${purpose}/${
       loan_detail.age !== null ? loan_detail.age : "不能說的秘密"
