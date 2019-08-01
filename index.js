@@ -46,7 +46,7 @@ const callApi = () => {
             //將需要推播的資料打進從 IFTTT 拿到的 webhooks URL
             //將webhooks的key值放到URL尾端
             request.post(
-              "https://maker.ifttt.com/trigger/song/with/key/{key}",
+              "https://maker.ifttt.com/trigger/{name}/with/key/{key}",
               {
                 form: {
                   value1: `<br>🔔利率 : ${apr}(${lender_irr}） <br>🔔期數 : ${period} <br><br>${purpose}/${
