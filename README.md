@@ -20,7 +20,7 @@
 - 打開自己的 webhooks 服務
 - 點擊右上角的設定
 - send Message 的 Recipient 選擇要送通知的人或群組
-- send Message 的 Message 為通知格，[與此處對應](#參數格式)
+- send Message 的 Message 為通知格式，[與此處對應](#參數格式)
 
 ```html
 {{Value1}}<br />
