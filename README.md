@@ -32,7 +32,7 @@
      //創建Procfile，告訴heroku使用worker
      $ echo 'worker: node index.js' > Procfile
      
-     //創建 index.js，將主程式貼
+     //創建 index.js，將主程式貼上
      
      //上傳至heroku
      $ git add .
