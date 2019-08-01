@@ -1,0 +1,22 @@
+{
+  "name": "lnb_notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyler-ntut/lnb_notify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyler-ntut/lnb_notify/issues"
+  },
+  "homepage": "https://github.com/Tyler-ntut/lnb_notify#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
