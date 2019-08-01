@@ -44,8 +44,6 @@
     你也可以將 heroku 專案綁定 github 的 repository，完成 CD
 
 
-- 將 heroku 專案綁定 github 的 repository，完成 CD
-
 ## heroku 小筆記
 
 > Heroku runs one web dyno for you automatically, but other process types don’t start by default. To launch a worker, you need to scale it up to one dyno
