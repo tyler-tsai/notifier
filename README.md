@@ -4,6 +4,11 @@
 
 投資信用貸款平台[LNB](https://lnb.com.tw "LNB")時，常常沒空瀏覽網頁而錯過優質案件，使用這個 notifier 在新案件上架時能夠在 line 收到通知，即時挑選有興趣的案件。
 
+## 使用到的技術與工具
+- [IFTTT](https://ifttt.com/) - IFTTT，是一個新生的網絡服務平台，通過其他不同平台的條件來決定是否執行下一條命令。即對網絡服務通過其他網絡服務作出反應。
+- [Heroku](https://dashboard.heroku.com/) - Heroku是一個支援多種程式語言的雲平台即服務。
+- [Node.js](https://nodejs.org/en/) - Node.js是一個能夠在伺服器端運行JavaScript的開放原始碼、跨平台JavaScript執行環境。
+
 ## 使用教學
 
 - 建立[IFTTT](https://ifttt.com/ "IFTTT")帳號
@@ -12,7 +17,7 @@
 - 出現 if this then that，this 選擇 webhooks，that 選擇 line
 - 獲取 webhooks 的 url
 - 完成 codebase
-- 上傳 codebase 到 heroku，使用他們的 worker 服務
+- 上傳 codebase 到 [heroku](https://dashboard.heroku.com/)，使用他們的 worker 服務
   * 首先註冊heroku帳號
   * 建立一個空專案
   * 自行建立一個nodejs projec在本地端後，上傳到heroku
@@ -37,7 +42,7 @@
      //上傳至heroku
      $ git add .
      $ git commit 'first commit'
-     $ git push heroku master //上傳到heroku
+     $ git push heroku master
     ``` 
      關於如何使用 heroku CLI ，可參考 
      [官方文件](https://devcenter.heroku.com/articles/deploying-nodejs)
