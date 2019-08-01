@@ -4,6 +4,8 @@
 
 投資信用貸款平台[LNB](https://lnb.com.tw "LNB")時，常常沒空瀏覽網頁而錯過優質案件，使用這個 notifier 在新案件上架時能夠在 line 收到通知，即時挑選有興趣的案件。
 
+![](https://i.imgur.com/aB0f9lY.png)
+
 ## 使用到的技術與工具
 - [IFTTT](https://ifttt.com/) - IFTTT，是一個新生的網絡服務平台，通過其他不同平台的條件來決定是否執行下一條命令。即對網絡服務通過其他網絡服務作出反應。
 - [Heroku](https://dashboard.heroku.com/) - Heroku是一個支援多種程式語言的雲平台即服務。
